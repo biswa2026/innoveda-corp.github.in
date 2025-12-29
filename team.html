@@ -2,77 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Our Team | Innoveda Corp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Team | Innoveda Corp</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
       color: #222;
+      background: #ffffff;
     }
 
     /* NAVBAR */
-    header {
+    .navbar {
       background: #0f172a;
-      padding: 15px 40px;
+      padding: 15px 0;
     }
 
-    nav {
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 40px;
     }
 
-    nav a {
-      color: #fff;
+    .logo a {
+      color: #38bdf8;
+      font-size: 20px;
+      font-weight: bold;
       text-decoration: none;
-      margin-left: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
       font-weight: 500;
     }
 
-    nav a:hover {
+    .nav-links li a:hover,
+    .nav-links li a.active {
       text-decoration: underline;
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #38bdf8;
-    }
-
-    /* PAGE */
+    /* PAGE CONTENT */
     .container {
       max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
     }
 
-    h1, h2 {
-      text-align: center;
+    h1 {
+      font-size: 36px;
       margin-bottom: 20px;
     }
 
-    p {
+    .intro p {
       max-width: 900px;
       margin: 0 auto 20px;
-      text-align: center;
+      line-height: 1.6;
+      font-size: 16px;
     }
 
-    /* TEAM GRID */
+    /* TEAM CARDS */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-top: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
     }
 
     .team-card {
-      text-align: center;
-      padding: 30px;
       border: 1px solid #e5e7eb;
       border-radius: 12px;
+      padding: 30px 20px;
+      background: #fafafa;
     }
 
     .team-card img {
@@ -80,40 +93,62 @@
       height: 160px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .team-card h3 {
       margin: 10px 0 5px;
+      font-size: 20px;
     }
 
     .team-card p {
       margin: 0;
-      font-weight: 500;
       color: #555;
+      font-size: 14px;
     }
 
     /* LEADERSHIP */
     .leadership {
-      margin-top: 70px;
+      margin-top: 80px;
+      text-align: left;
     }
 
-    /* JOIN */
+    .leadership h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .leadership p {
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* JOIN TEAM */
     .join {
       margin-top: 70px;
-      background: #f8fafc;
-      padding: 40px;
-      border-radius: 12px;
-      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid #e5e7eb;
     }
 
-    /* FOOTER */
+    .join p {
+      max-width: 800px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
     footer {
+      margin-top: 80px;
+      padding: 20px;
       background: #0f172a;
       color: #fff;
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
       font-size: 14px;
     }
   </style>
@@ -121,104 +156,93 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <nav>
-      <div class="logo">Innoveda Corp</div>
-      <div>
-        <a href="index.html">Home</a>
-        <a href="our-work.html">Our Work</a>
-        <a href="team.html">Team</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">Innoveda Corp</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="team.html" class="active">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- CONTENT -->
-  <div class="container">
+<!-- MAIN CONTENT -->
+<div class="container">
+  <h1>Our Team</h1>
 
-    <h1>Our Team</h1>
-
+  <div class="intro">
     <p>
       Our team comes together driven by curiosity and a passion for innovation.
-      We build intelligent systems where agentic AI and CrewAI work together to
-      tackle complex tasks seamlessly.
+      We build intelligent systems where agentic AI and CrewAI work together to tackle complex tasks seamlessly.
     </p>
-
     <p>
-      OpenAI agents bring dynamic problem-solving and adaptability to every workflow
-      we design. With Autogen, we automate customer service and digital marketing
-      processes to save time and enhance efficiency.
+      OpenAI agents bring dynamic problem-solving and adaptability to every workflow we design.
+      With Autogen, we automate customer service and digital marketing processes to save time and enhance efficiency.
     </p>
-
     <p>
-      Each member contributes their unique skills, from coding and AI research to
-      design and strategy. Together, we turn ambitious ideas into AI-powered
-      experiences that empower businesses and delight users.
+      Each member contributes their unique skills, from coding and AI research to design and strategy.
+      Together, we turn ambitious ideas into AI-powered experiences that empower businesses and delight users.
     </p>
-
-    <!-- TEAM MEMBERS -->
-    <div class="team-grid">
-
-      <div class="team-card">
-        <img src="images/biswa.jpeg" alt="Biswa Tripathy">
-        <h3>Biswa Tripathy</h3>
-        <p>Co-Founder & CEO</p>
-      </div>
-
-      <div class="team-card">
-        <img src="images/anil.jpeg" alt="Anil Kumar">
-        <h3>Anil Kumar</h3>
-        <p>CTO</p>
-      </div>
-
-      <div class="team-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
-             alt="Profile Icon"
-             style="opacity:0.6;">
-        <h3>Swaraj Dash</h3>
-        <p>Marketing</p>
-      </div>
-
-    </div>
-
-    <!-- LEADERSHIP -->
-    <div class="leadership">
-      <h2>Leadership</h2>
-      <p>
-        Our Co-Founder and CEO, <strong>Biswa Tripathy</strong>, brings over 13 years of
-        industry experience and a deep passion for cutting-edge AI technologies.
-        He has mastered agentic AI, Generative AI (GenAI), prompt engineering,
-        CrewAI, and autonomous agent workflows.
-      </p>
-
-      <p>
-        Under his leadership, the team designs and deploys intelligent AI solutions
-        across customer service automation, AI-driven digital marketing, and
-        scalable autonomous systems. His commitment to responsible AI and
-        continuous learning drives real-world impact.
-      </p>
-    </div>
-
-    <!-- JOIN -->
-    <div class="join">
-      <h2>Join the Team</h2>
-      <p>
-        We are looking for curious, collaborative teammates passionate about AI,
-        automation, and emerging technologies. If you enjoy solving complex
-        problems and building intelligent solutions, we’d love to hear from you.
-      </p>
-      <p>
-        📧 <strong>biswatripathy21@gmail.com</strong> &nbsp; | &nbsp; 📍 <strong>Bangalore, India</strong>
-      </p>
-    </div>
-
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Innoveda Corp. All rights reserved.
-  </footer>
+  <!-- TEAM MEMBERS -->
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="images/biswa.jpg" alt="Biswa Tripathy">
+      <h3>Biswa Tripathy</h3>
+      <p>Co-Founder & CEO</p>
+    </div>
+
+    <div class="team-card">
+      <img src="images/anil.jpg" alt="Anil Kumar">
+      <h3>Anil Kumar</h3>
+      <p>CTO</p>
+    </div>
+
+    <div class="team-card">
+      <img src="images/placeholder.png" alt="Swaraj Dash">
+      <h3>Swaraj Dash</h3>
+      <p>Marketing</p>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP -->
+  <div class="leadership">
+    <h2>Leadership</h2>
+    <p>
+      Our Co-Founder and CEO Biswa Tripathy brings over 13 years of industry experience and a deep passion
+      for cutting-edge AI technologies. He has mastered agentic AI, Generative AI (GenAI), prompt engineering,
+      and CrewAI, earning certifications in each of these niche areas.
+    </p>
+    <p>
+      Under his leadership, he has built and mentors a talented team of skilled professionals,
+      guiding them to design and deploy intelligent AI solutions. His expertise combines technical
+      excellence with strategic vision, enabling innovation in customer service automation,
+      AI-driven digital marketing, and autonomous agent workflows.
+    </p>
+  </div>
+
+  <!-- JOIN -->
+  <div class="join">
+    <h2>Join the Team</h2>
+    <p>
+      We are looking for teammates who are curious, collaborative, and passionate about AI and emerging technologies.
+      If you enjoy solving complex problems and building intelligent systems, we would love to hear from you.
+    </p>
+    <div class="contact">
+      📧 biswatripathy21@gmail.com &nbsp; | &nbsp; 📍 Bangalore, India
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Innoveda Corp. All rights reserved.
+</footer>
 
 </body>
 </html>
