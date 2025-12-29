@@ -2,34 +2,133 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Our Work | InnoVeda</title>
+<title>Our Work | InnoVeda Ltd</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body { font-family: Arial; margin:0; }
-nav { background:#111; padding:15px; }
-nav a { color:white; margin-right:20px; text-decoration:none; }
-section { padding:40px; }
-img { max-width:100%; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+}
+
+nav {
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #f7f7f7;
+  padding: 30px 20px;
+}
+
+nav h2 {
+  margin-bottom: 30px;
+}
+
+nav a {
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+main {
+  margin-left: 260px;
+  padding: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+@media(max-width: 900px) {
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    margin-left: 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
 <body>
 
+<!-- LEFT MENU -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="team.html">Our Team</a>
-  <a href="work.html">Our Work</a>
+  <h2>InnoVeda Ltd</h2>
+  <a href="home.html">Home</a>
+  <a href="mission.html">Mission & Vision</a>
+  <a href="team.html">Team</a>
+  <a href="our-work.html"><strong>Our Work</strong></a>
   <a href="contact.html">Contact Us</a>
 </nav>
 
-<section>
-  <h1>Our Work</h1>
-  <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
-  <p>
-    We deliver AI platforms, intelligent automation,
-    analytics solutions, and enterprise digital systems.
-  </p>
-</section>
+<!-- MAIN CONTENT -->
+<main>
+
+<!-- ROW 1 -->
+<div class="grid">
+  <img src="https://images.unsplash.com/photo-1581092334433-4c4a27c0b1c4" alt="Infobot">
+  <div>
+    <h3>Infobot</h3>
+    <p>A customised AI chatbot designed for business startups to automate customer interaction and support.</p>
+  </div>
+</div>
+
+<!-- ROW 2 -->
+<div class="grid">
+  <div>
+    <h3>Digital Marketing</h3>
+    <p>AI-driven digital marketing and sales campaign optimization for higher conversion and reach.</p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Digital Marketing">
+</div>
+
+<!-- ROW 3 -->
+<div class="grid">
+  <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980" alt="Customer Service Automation">
+  <div>
+    <h3>Customer Service Automation</h3>
+    <p>Automation of customer service desk using CrewAI to improve efficiency and response time.</p>
+  </div>
+</div>
+
+<!-- ROW 4 -->
+<div class="grid">
+  <div>
+    <h3>Other AI Needs</h3>
+    <p>
+      Sales brochure automation<br>
+      Custom AI solutions<br>
+      Marketing campaign automation using AI
+    </p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="AI Solutions">
+</div>
+
+</main>
 
 </body>
 </html>
