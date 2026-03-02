@@ -17,7 +17,7 @@ nav a { color:white; margin-right:25px; text-decoration:none; }
 h2 { color:#7a0046; }
 footer { background:#f5f5f5; text-align:center; padding:30px; }
 
-/* ================= CHAT WIDGET STYLES ================= */
+/* ================= CHAT WIDGET ================= */
 
 #chat-button {
   position: fixed;
@@ -25,7 +25,7 @@ footer { background:#f5f5f5; text-align:center; padding:30px; }
   right: 20px;
   background: #7a0046;
   color: white;
-  padding: 14px 18px;
+  padding: 14px 20px;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
@@ -128,20 +128,34 @@ footer { background:#f5f5f5; text-align:center; padding:30px; }
     InnoVeda AI Assistant
     <span id="close-chat">✕</span>
   </div>
-  <iframe src="https://agent-242993992235.us-central1.run.app/"></iframe>
+  <iframe id="chat-iframe"
+    src="https://agent-242993992235.us-central1.run.app/">
+  </iframe>
 </div>
 
 <script>
 const chatBtn = document.getElementById("chat-button");
 const chatBox = document.getElementById("chat-box");
 const closeChat = document.getElementById("close-chat");
+const iframe = document.getElementById("chat-iframe");
+const botURL = "https://agent-242993992235.us-central1.run.app/";
 
+// Open chat
 chatBtn.onclick = () => {
   chatBox.style.display = "block";
 };
 
+// Close chat + reset session
 closeChat.onclick = () => {
   chatBox.style.display = "none";
+
+  // Destroy session completely
+  iframe.src = "";
+  
+  // Reload fresh bot
+  setTimeout(() => {
+    iframe.src = botURL;
+  }, 100);
 };
 </script>
 
